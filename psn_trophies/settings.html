@@ -1,0 +1,25 @@
+{% if plugin.id == "psn_trophies" %}
+<hr>
+<h3>PlayStation Trophies Settings</h3>
+
+<div class="form-group">
+    <label for="online_id">PSN Online ID</label>
+    <input type="text"
+           class="form-control"
+           name="online_id"
+           value="{{ plugin.get('online_id', '') }}"
+           placeholder="Enter your PSN username">
+</div>
+
+<div class="form-group">
+    <label for="npsso">NPSSO Token</label>
+    <input type="password"
+           class="form-control"
+           name="npsso"
+           value="{{ plugin.get('npsso', '') }}"
+           placeholder="Enter your NPSSO token">
+    <small class="form-text text-muted">
+        Required for PlayStation API authentication.
+    </small>
+</div>
+{% endif %}
